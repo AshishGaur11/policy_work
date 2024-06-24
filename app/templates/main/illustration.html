@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Illustration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 100px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        .logout-link {
+            float: right;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Policy Illustration</h1>
+    <table>
+        <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Premium</td>
+            <td>{{ premium }}</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>{{ age }}</td>
+        </tr>
+        <tr>
+            <td>Projected Benefits</td>
+            <td>{{ projected_benefits }}</td>
+        </tr>
+    </table>
+    <a class="logout-link" href="{{ url_for('auth.logout') }}">Logout</a>
+</body>
+</html>
